@@ -98,7 +98,7 @@ function AllowRunServiceBind.OnInvoke(args)
     end
     local CoreGui = game:GetService("StarterGui")
     CoreGui:SetCore("SendNotification", {
-        Title = "Sun x hub",
+        Title = "Sun hub",
         Text = "By Nguyen Hoang Minh",
         Icon = "rbxthumb://type=Asset&id=17544021962&w=150&h=150",
         Duration = math.huge,
@@ -122,7 +122,7 @@ end)
 
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-    Title = "Sun x hub",
+    Title = "Sun hub",
     Text = "By Nguyen Hoang Minh",
     Icon = "rbxthumb://type=Asset&id=17544021962&w=150&h=150",
     Duration = math.huge,
