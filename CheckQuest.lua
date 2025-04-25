@@ -1,39 +1,3 @@
-spawn(function()
-    for _, instance in pairs(game:GetDescendants()) do
-        if instance:IsA("ParticleEmitter") or instance:IsA("Trail") then
-            instance.Lifetime = NumberRange.new(0)
-        elseif instance:IsA("Explosion") then
-            instance.BlastPressure = 1
-            instance.BlastRadius = 1
-        elseif instance:IsA("Fire") or instance:IsA("SpotLight") or instance:IsA("Smoke") then
-            instance.Enabled = false
-        end
-    end
-end)
-
-spawn(function()
-    for _, instance in pairs(game:GetDescendants()) do
-        if instance:IsA("Texture") then
-            instance.Texture = ""
-        elseif instance:IsA("BasePart") and instance.Material == Enum.Material.Water then
-            instance.Material = Enum.Material.SmoothPlastic
-        end
-    end
-    
-    for _, scriptInstance in pairs(game.Players.LocalPlayer.PlayerScripts:GetDescendants()) do
-        local waterEffects = {
-            "WaterBlur",
-            "WaterEffect",
-            "WaterColorCorrection",
-            "WaterCFrame",
-            "MirageFog"
-        }
-        
-        if table.find(waterEffects, scriptInstance.Name) then
-            scriptInstance:Destroy()
-        end
-    end
-end)
 
    function CheckQuest() 
         MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
