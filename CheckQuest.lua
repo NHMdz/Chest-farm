@@ -1,5 +1,4 @@
-
-   function CheckQuest() 
+function CheckQuest() 
         MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
         if World1 then
             if MyLevel == 1 or MyLevel <= 9 then
@@ -91,14 +90,14 @@
                 LevelQuest = 1
                 NameQuest = "PrisonerQuest"
                 NameMon = "Prisoner"
-                CFrameQuest = CFrame.new(5308.93115, 1.65517521, 475.120514, -0.0894274712, -5.00292918e-09, -0.995993316, 1.60817859e-09, 1, -5.16744869e-09, 0.995993316, -2.06384709e-09, -0.0894274712)
+                CFrameQuest = CFrame.new(5308.93115, 11.65517521, 475.120514, -0.0894274712, -5.00292918e-09, -0.995993316, 1.60817859e-09, 1, -5.16744869e-09, 0.995993316, -2.06384709e-09, -0.0894274712)
                 CFrameMon = CFrame.new(5098.9736328125, -0.3204058110713959, 474.2373352050781)
             elseif MyLevel == 210 or MyLevel <= 249 then
                 Mon = "Dangerous Prisoner"
                 LevelQuest = 2
                 NameQuest = "PrisonerQuest"
                 NameMon = "Dangerous Prisoner"
-                CFrameQuest = CFrame.new(5308.93115, 1.65517521, 475.120514, -0.0894274712, -5.00292918e-09, -0.995993316, 1.60817859e-09, 1, -5.16744869e-09, 0.995993316, -2.06384709e-09, -0.0894274712)
+                CFrameQuest = CFrame.new(5308.93115, 11.65517521, 475.120514, -0.0894274712, -5.00292918e-09, -0.995993316, 1.60817859e-09, 1, -5.16744869e-09, 0.995993316, -2.06384709e-09, -0.0894274712)
                 CFrameMon = CFrame.new(5654.5634765625, 15.633401870727539, 866.2991943359375)
             elseif MyLevel == 250 or MyLevel <= 274 then
                 Mon = "Toga Warrior"
