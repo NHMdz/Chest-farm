@@ -1,13 +1,19 @@
-function CheckQuest() 
+        function CheckQuest() 
         MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
         if World1 then
-            if MyLevel == 1 or MyLevel <= 9 then
+            if MyLevel == 1 or MyLevel <= 9 and tostring(game.Players.LocalPlayer.Team) == "Pirates" then
                 Mon = "Bandit"
                 LevelQuest = 1
                 NameQuest = "BanditQuest1"
                 NameMon = "Bandit"
                 CFrameQuest = CFrame.new(1059.37195, 15.4495068, 1550.4231, 0.939700544, -0, -0.341998369, 0, 1, -0, 0.341998369, 0, 0.939700544)
                 CFrameMon = CFrame.new(1045.962646484375, 27.00250816345215, 1560.8203125)
+            elseif MyLevel == 1 or MyLevel <= 9 and tostring(game.Players.LocalPlayer.Team) == "Marines" then
+                Mon = "Trainee"
+                LevelQuest = 1
+                NameQuest = "MarineQuest"
+                CFrameQuest = CFrame.new(-2708.5769, 23.4660034, 2105.3479, 0.707134247, 0, 0.707079291, 0, 1, 0, -0.707079291, 0, 0.707134247)
+                CFrameMon = CFrame.new(-2709.67944, 24.5206585, 2104.24585, -0.744724929, -3.97967455e-08, -0.667371571, 4.32403588e-08, 1, -1.07884304e-07, 0.667371571, -1.09201515e-07, -0.744724929)
             elseif MyLevel == 10 or MyLevel <= 14 then
                 Mon = "Monkey"
                 LevelQuest = 1
