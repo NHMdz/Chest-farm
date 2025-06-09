@@ -97,7 +97,7 @@
                 NameQuest = "PrisonerQuest"
                 NameMon = "Prisoner"
                 CFrameQuest = CFrame.new(5308.93115, 11.65517521, 475.120514, -0.0894274712, -5.00292918e-09, -0.995993316, 1.60817859e-09, 1, -5.16744869e-09, 0.995993316, -2.06384709e-09, -0.0894274712)
-                CFrameMon = CFrame.new(5098.9736328125, -0.3204058110713959, 474.2373352050781)
+                CFrameMon = CFrame.new(5098.9736328125, 9.679594188928604, 474.2373352050781)
             elseif MyLevel == 210 or MyLevel <= 249 then
                 Mon = "Dangerous Prisoner"
                 LevelQuest = 2
