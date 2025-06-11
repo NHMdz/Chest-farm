@@ -1,4 +1,12 @@
-        function CheckQuest() 
+function Cfpi()
+    local cframes = {
+        CFrame.new(-4881.23095703125, 22.65204429626465, 4273.75244140625),
+        CFrame.new(-4839, 23, 4328)
+    }
+    return cframes[math.random(1, #cframes)]
+end
+
+    function CheckQuest() 
         MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
         if World1 then
             if MyLevel == 1 or MyLevel <= 9 and tostring(game.Players.LocalPlayer.Team) == "Pirates" then
@@ -77,7 +85,7 @@
                 NameQuest = "MarineQuest2"
                 NameMon = "Chief Petty Officer"
                 CFrameQuest = CFrame.new(-5039.58643, 27.3500385, 4324.68018, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-                CFrameMon = CFrame.new(-4881.23095703125, 22.65204429626465, 4273.75244140625)
+                CFrameMon = Cfpi()
             elseif MyLevel == 150 or MyLevel <= 174 then
                 Mon = "Sky Bandit"
                 LevelQuest = 1
