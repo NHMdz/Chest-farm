@@ -66,14 +66,12 @@ function FPSBooster()
                     if not humanoid then
                         for _, part in pairs(obj:GetDescendants()) do
                             if part:IsA("BasePart") then
-                                part.Transparency = 0.8
-                                part.CanCollide = false
+                                part.Transparency = 1
                             end
                         end
                     end
                 elseif obj:IsA("BasePart") then
-                    obj.Transparency = 0.8
-                    obj.CanCollide = false
+                    obj.Transparency = 1
                 end
             end
         end)
