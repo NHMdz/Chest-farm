@@ -15,9 +15,6 @@ function FPSBooster()
             if v:IsA("BasePart") or v:IsA("UnionOperation") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
                 v.Material = Enum.Material.Plastic
                 v.Reflectance = 0
-                if v.Parent ~= localPlayer.Character then
-                    v.CanCollide = false
-                end
             elseif (v:IsA("Decal") or v:IsA("Texture")) and decalsyeeted then
                 v.Transparency = 1
             elseif v:IsA("Explosion") then
@@ -29,9 +26,6 @@ function FPSBooster()
                 v.Material = Enum.Material.Plastic
                 v.Reflectance = 0
                 v.TextureID = ""
-                if v.Parent ~= localPlayer.Character then
-                    v.CanCollide = false
-                end
             end
         end)
     end
@@ -60,18 +54,14 @@ function FPSBooster()
 
     for _, obj in pairs(w:GetChildren()) do
         pcall(function()
-            if obj.Name ~= "Players" and obj ~= localPlayer.Character then
-                if obj:IsA("Model") then
-                    local humanoid = obj:FindFirstChildWhichIsA("Humanoid")
-                    if not humanoid then
-                        for _, part in pairs(obj:GetDescendants()) do
-                            if part:IsA("BasePart") then
-                                part.Transparency = 1
-                            end
+            if obj ~= localPlayer.Character and obj:IsA("Model") then
+                local humanoid = obj:FindFirstChildWhichIsA("Humanoid")
+                if not humanoid then
+                    for _, part in pairs(obj:GetDescendants()) do
+                        if part:IsA("BasePart") then
+                            part.Transparency = 1
                         end
                     end
-                elseif obj:IsA("BasePart") then
-                    obj.Transparency = 1
                 end
             end
         end)
@@ -89,9 +79,6 @@ function FPSBooster()
             if v:IsA("BasePart") then
                 v.Material = Enum.Material.Plastic
                 v.Reflectance = 0
-                if v.Parent ~= localPlayer.Character then
-                    v.CanCollide = false
-                end
             elseif v:IsA("Decal") or v:IsA("Texture") then
                 v.Transparency = 1
             elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
